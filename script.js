@@ -6,8 +6,10 @@ let weather = {
         +"&units=imperial&appid="
         + this.apiKey)
         .then ((response)=> response.json())
-        .then((data)=> this.displayWeather(data));
-    },
+        .then((data)=> this.displayWeather(data))
+        .catch((error) => 
+            alert("Please check your spelling <3"));
+        },
     displayWeather: function(data) {
         const { name } = data;
         const { icon, description } = data.weather[0];
@@ -23,6 +25,7 @@ let weather = {
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "' )"
     },
     search: function () {
+       
         this.fetchWeather(document.querySelector(".search-bar").value);
     }
 }
