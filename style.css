@@ -8,6 +8,7 @@ body {
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-size: 120%;
